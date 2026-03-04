@@ -139,9 +139,104 @@ It should look like this:
 
 ---
 
+## Using Claude Code as a Client
+
+You can use [Claude Code](https://docs.anthropic.com/en/docs/claude-code) as a CLI client pointed at Quatarly instead of Anthropic directly. No Anthropic account or API key needed — just your Quatarly key.
+
+### Step 1 — Install Claude Code
+
+```bash
+npm install -g @anthropic-ai/claude-code
+```
+
+---
+
+### Step 2 — Set Environment Variables
+
+**Option A — Let your LLM agent do it**
+
+Paste this prompt into any LLM agent (Factory Droid, Claude Code, etc.):
+
+```
+Follow the Claude Code setup instructions at https://raw.githubusercontent.com/himanshu91081/Quatarly-setup/main/README.md
+
+My Quatarly API key is: <your-api-key>
+
+Run the appropriate setup script for my OS (set-claude-env.ps1 for Windows, set-claude-env.sh for macOS/Linux)
+to set the environment variables so Claude Code routes through Quatarly.
+```
+
+---
+
+**Option B — Run manually (humans)**
+
+Download the setup script and run it with your API key:
+
+**Windows** (PowerShell):
+```powershell
+.\set-claude-env.ps1 -ApiKey "qua_trail_your-key-here"
+```
+
+**macOS / Linux** (Bash):
+```bash
+bash set-claude-env.sh qua_trail_your-key-here
+```
+
+Then restart your terminal (or run `source ~/.zshrc` / `source ~/.bashrc`) to apply.
+
+---
+
+**Option C — Set manually without any script**
+
+If you just want to set it for the current terminal session only:
+
+**macOS / Linux:**
+```bash
+export ANTHROPIC_BASE_URL="https://api.quatarly.cloud/"
+export ANTHROPIC_AUTH_TOKEN="qua_trail_your-key-here"
+export ANTHROPIC_DEFAULT_HAIKU_MODEL="claude-haiku-4-5-20251001"
+export ANTHROPIC_DEFAULT_SONNET_MODEL="claude-sonnet-4-6-20250929"
+export ANTHROPIC_DEFAULT_OPUS_MODEL="claude-opus-4-6-thinking"
+```
+
+**Windows (PowerShell):**
+```powershell
+$env:ANTHROPIC_BASE_URL             = "https://api.quatarly.cloud/"
+$env:ANTHROPIC_AUTH_TOKEN           = "qua_trail_your-key-here"
+$env:ANTHROPIC_DEFAULT_HAIKU_MODEL  = "claude-haiku-4-5-20251001"
+$env:ANTHROPIC_DEFAULT_SONNET_MODEL = "claude-sonnet-4-6-20250929"
+$env:ANTHROPIC_DEFAULT_OPUS_MODEL   = "claude-opus-4-6-thinking"
+```
+
+To make it permanent, add the `export` lines to your `~/.zshrc` (macOS) or `~/.bashrc` (Linux), or use `[System.Environment]::SetEnvironmentVariable(...)` on Windows.
+
+---
+
+This sets the following environment variables:
+
+| Variable | Value |
+|----------|-------|
+| `ANTHROPIC_BASE_URL` | `https://api.quatarly.cloud/` |
+| `ANTHROPIC_AUTH_TOKEN` | your Quatarly API key |
+| `ANTHROPIC_DEFAULT_HAIKU_MODEL` | `claude-haiku-4-5-20251001` |
+| `ANTHROPIC_DEFAULT_SONNET_MODEL` | `claude-sonnet-4-6-20250929` |
+| `ANTHROPIC_DEFAULT_OPUS_MODEL` | `claude-opus-4-6-thinking` |
+
+### Step 3 — Run Claude Code
+
+```bash
+claude
+```
+
+Claude Code will now route all requests through Quatarly using your API key and credit balance.
+
+---
+
 ## Files
 
-| File | Platform |
-|------|----------|
-| `add-quatarly-models.ps1` | Windows (PowerShell) |
-| `add-quatarly-models.sh` | macOS / Linux (Bash) |
+| File | Platform | Purpose |
+|------|----------|---------|
+| `add-quatarly-models.ps1` | Windows (PowerShell) | Factory AI Droid custom models |
+| `add-quatarly-models.sh` | macOS / Linux (Bash) | Factory AI Droid custom models |
+| `set-claude-env.ps1` | Windows (PowerShell) | Claude Code env setup |
+| `set-claude-env.sh` | macOS / Linux (Bash) | Claude Code env setup |
