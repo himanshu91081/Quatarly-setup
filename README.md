@@ -182,7 +182,11 @@ Download the setup script and run it with your API key:
 bash set-claude-env.sh qua_trail_your-key-here
 ```
 
-Then restart your terminal (or run `source ~/.zshrc` / `source ~/.bashrc`) to apply.
+The variables are set **globally** (user-level persistent) — they survive terminal restarts.
+
+- **New terminal**: picks up automatically
+- **Current terminal**: run `source ~/.zshrc` (macOS) or `source ~/.bashrc` (Linux) to apply immediately
+- **GUI apps / VS Code / system services**: require a **full logout or system restart** to pick up the new env vars
 
 ---
 
@@ -208,7 +212,7 @@ $env:ANTHROPIC_DEFAULT_SONNET_MODEL = "claude-sonnet-4-6-20250929"
 $env:ANTHROPIC_DEFAULT_OPUS_MODEL   = "claude-opus-4-6-thinking"
 ```
 
-To make it permanent, add the `export` lines to your `~/.zshrc` (macOS) or `~/.bashrc` (Linux), or use `[System.Environment]::SetEnvironmentVariable(...)` on Windows.
+To make it permanent, add the `export` lines to your `~/.zshrc` (macOS) or `~/.bashrc` (Linux), or use `[System.Environment]::SetEnvironmentVariable(...)` on Windows. After doing so, **restart your system** (or log out and back in) so all apps pick up the changes.
 
 ---
 
