@@ -89,12 +89,12 @@ It should look like this:
 ```json
 "customModels": [
   {
-    "model": "claude-sonnet-4-6-20250929",
-    "id": "custom:claude-sonnet-4-6-20250929-0",
+    "model": "claude-sonnet-4-6-thinking",
+    "id": "custom:claude-sonnet-4-6-thinking-0",
     "index": 0,
     "baseUrl": "https://api.quatarly.cloud/",
     "apiKey": "your-api-key",
-    "displayName": "claude-sonnet-4-6-20250929",
+    "displayName": "claude-sonnet-4-6-thinking",
     "noImageSupport": false,
     "provider": "anthropic"
   },
@@ -117,7 +117,7 @@ It should look like this:
 
 | Model | Provider | Base URL |
 |-------|----------|----------|
-| `claude-sonnet-4-6-20250929` | anthropic | `https://api.quatarly.cloud/` |
+| `claude-sonnet-4-6-thinking` | anthropic | `https://api.quatarly.cloud/` |
 | `claude-opus-4-6-thinking` | anthropic | `https://api.quatarly.cloud/` |
 | `claude-haiku-4-5-20251001` | anthropic | `https://api.quatarly.cloud/` |
 | `gemini-3.1-pro` | openai | `https://api.quatarly.cloud/v1` |
@@ -199,7 +199,7 @@ If you just want to set it for the current terminal session only:
 export ANTHROPIC_BASE_URL="https://api.quatarly.cloud/"
 export ANTHROPIC_AUTH_TOKEN="qua_trail_your-key-here"
 export ANTHROPIC_DEFAULT_HAIKU_MODEL="claude-haiku-4-5-20251001"
-export ANTHROPIC_DEFAULT_SONNET_MODEL="claude-sonnet-4-6-20250929"
+export ANTHROPIC_DEFAULT_SONNET_MODEL="claude-sonnet-4-6-thinking"
 export ANTHROPIC_DEFAULT_OPUS_MODEL="claude-opus-4-6-thinking"
 ```
 
@@ -208,7 +208,7 @@ export ANTHROPIC_DEFAULT_OPUS_MODEL="claude-opus-4-6-thinking"
 $env:ANTHROPIC_BASE_URL             = "https://api.quatarly.cloud/"
 $env:ANTHROPIC_AUTH_TOKEN           = "qua_trail_your-key-here"
 $env:ANTHROPIC_DEFAULT_HAIKU_MODEL  = "claude-haiku-4-5-20251001"
-$env:ANTHROPIC_DEFAULT_SONNET_MODEL = "claude-sonnet-4-6-20250929"
+$env:ANTHROPIC_DEFAULT_SONNET_MODEL = "claude-sonnet-4-6-thinking"
 $env:ANTHROPIC_DEFAULT_OPUS_MODEL   = "claude-opus-4-6-thinking"
 ```
 
@@ -223,7 +223,7 @@ This sets the following environment variables:
 | `ANTHROPIC_BASE_URL` | `https://api.quatarly.cloud/` |
 | `ANTHROPIC_AUTH_TOKEN` | your Quatarly API key |
 | `ANTHROPIC_DEFAULT_HAIKU_MODEL` | `claude-haiku-4-5-20251001` |
-| `ANTHROPIC_DEFAULT_SONNET_MODEL` | `claude-sonnet-4-6-20250929` |
+| `ANTHROPIC_DEFAULT_SONNET_MODEL` | `claude-sonnet-4-6-thinking` |
 | `ANTHROPIC_DEFAULT_OPUS_MODEL` | `claude-opus-4-6-thinking` |
 
 ### Step 3 — Run Claude Code
