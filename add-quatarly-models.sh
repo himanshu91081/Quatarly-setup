@@ -25,7 +25,7 @@ settings_path = sys.argv[1]
 api_key = sys.argv[2]
 
 new_models = [
-    {"model": "claude-sonnet-4-6-20250929", "baseUrl": "https://api.quatarly.cloud/",   "apiKey": api_key, "provider": "anthropic", "displayName": "claude-sonnet-4-6-20250929"},
+    {"model": "claude-sonnet-4-6-thinking", "baseUrl": "https://api.quatarly.cloud/",   "apiKey": api_key, "provider": "anthropic", "displayName": "claude-sonnet-4-6-thinking"},
     {"model": "claude-opus-4-6-thinking",   "baseUrl": "https://api.quatarly.cloud/",   "apiKey": api_key, "provider": "anthropic", "displayName": "claude-opus-4-6-thinking"  },
     {"model": "claude-haiku-4-5-20251001",  "baseUrl": "https://api.quatarly.cloud/",   "apiKey": api_key, "provider": "anthropic", "displayName": "claude-haiku-4-5-20251001" },
     {"model": "gemini-3.1-pro",             "baseUrl": "https://api.quatarly.cloud/v1", "apiKey": api_key, "provider": "openai",    "displayName": "gemini-3.1-pro"            },
