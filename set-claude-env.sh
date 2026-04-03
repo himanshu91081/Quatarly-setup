@@ -13,7 +13,7 @@ fi
 
 BASE_URL="https://api.quatarly.cloud/"
 HAIKU_MODEL="claude-haiku-4-5-20251001"
-SONNET_MODEL="claude-sonnet-4-6-20250929"
+SONNET_MODEL="claude-sonnet-4-6-thinking"
 OPUS_MODEL="claude-opus-4-6-thinking"
 
 VARS="
