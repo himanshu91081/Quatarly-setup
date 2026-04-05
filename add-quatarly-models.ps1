@@ -30,7 +30,7 @@ new_models = [
     {"model": "claude-haiku-4-5-20251001",  "baseUrl": "https://api.quatarly.cloud/",   "apiKey": api_key, "provider": "anthropic", "displayName": "claude-haiku-4-5-20251001" },
     {"model": "gemini-3.1-pro",             "baseUrl": "https://api.quatarly.cloud/v1", "apiKey": api_key, "provider": "openai",    "displayName": "gemini-3.1-pro"            },
     {"model": "gemini-3-flash",             "baseUrl": "https://api.quatarly.cloud/v1", "apiKey": api_key, "provider": "openai",    "displayName": "gemini-3-flash"            },
-    {"model": "gpt-5.1",                    "baseUrl": "https://api.quatarly.cloud/v1", "apiKey": api_key, "provider": "openai",    "displayName": "gpt-5.1"                   },
+    {"model": "gpt-5.4",                    "baseUrl": "https://api.quatarly.cloud/v1", "apiKey": api_key, "provider": "openai",    "displayName": "gpt-5.4"                   },
     {"model": "gpt-5.1-codex",              "baseUrl": "https://api.quatarly.cloud/v1", "apiKey": api_key, "provider": "openai",    "displayName": "gpt-5.1-codex"             },
     {"model": "gpt-5.1-codex-max",          "baseUrl": "https://api.quatarly.cloud/v1", "apiKey": api_key, "provider": "openai",    "displayName": "gpt-5.1-codex-max"         },
     {"model": "gpt-5.2",                    "baseUrl": "https://api.quatarly.cloud/v1", "apiKey": api_key, "provider": "openai",    "displayName": "gpt-5.2"                   },
