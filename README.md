@@ -6,7 +6,7 @@ Connect Factory AI Droid to [Quatarly](https://api.quatarly.cloud) to access Cla
 
 - **Claude** — Sonnet 4.6, Opus 4.6 Thinking, Haiku 4.5
 - **Gemini** — 3.1 Pro, 3 Flash
-- **GPT** — 5.1, 5.1 Codex, 5.1 Codex Max, 5.2, 5.2 Codex, 5.3 Codex
+- **GPT** — 5.1, 5.1 Codex, 5.1 Codex Max, 5.2, 5.2 Codex, 5.3 Codex, 5.4 
 - All models accessible through a single Quatarly API key
 
 ---
@@ -99,12 +99,12 @@ It should look like this:
     "provider": "anthropic"
   },
   {
-    "model": "gpt-5.1",
-    "id": "custom:gpt-5.1-5",
+    "model": "gpt-5.4",
+    "id": "custom:gpt-5.4-5",
     "index": 5,
     "baseUrl": "https://api.quatarly.cloud/v1",
     "apiKey": "your-api-key",
-    "displayName": "gpt-5.1",
+    "displayName": "gpt-5.4",
     "noImageSupport": false,
     "provider": "openai"
   }
@@ -122,7 +122,7 @@ It should look like this:
 | `claude-haiku-4-5-20251001` | anthropic | `https://api.quatarly.cloud/` |
 | `gemini-3.1-pro` | openai | `https://api.quatarly.cloud/v1` |
 | `gemini-3-flash` | openai | `https://api.quatarly.cloud/v1` |
-| `gpt-5.1` | openai | `https://api.quatarly.cloud/v1` |
+| `gpt-5.4` | openai | `https://api.quatarly.cloud/v1` |
 | `gpt-5.1-codex` | openai | `https://api.quatarly.cloud/v1` |
 | `gpt-5.1-codex-max` | openai | `https://api.quatarly.cloud/v1` |
 | `gpt-5.2` | openai | `https://api.quatarly.cloud/v1` |
